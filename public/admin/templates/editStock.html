@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Stock
+            <small>Edit Stock</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/stockList"><i class="fa fa-dashboard"></i> Stock</a></li>
+            <li class="active">Edit Stock</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-11">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Edit Stock</h3>
+                    </div>
+                    <div class="form-group">
+                        <div class="alert alert-success" ng-show="update">
+                            <strong ng-bind="update" ></strong> 
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='form-group'>
+                            <input type='text' placeholder='Title' ng-model='stock.title' name='title' class='form-control'>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-height">
+                                    <select name="category" class="form-control" ng-model='stock.category' required="">
+                                        <option value="">Select Stock</option>
+                                        <option  value="Public Figure">Public Figure</option>
+                                        <option  value="Oils">Oils</option>
+                                        <option  value="Gas">Gas</option>
+                                        <option  value="Banks">Banks</option>
+                                    </select>
+                    </div>
+                    <div class="form-group">
+                        <input type='hidden' placeholder='stock' ng-model='stock.id' name='id' class='form-control'>
+                    </div>                    
+                    <div class="form-group">
+                        <div class='btn btn-success pull-right' ng-click='editStock()'>Publish Stock</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

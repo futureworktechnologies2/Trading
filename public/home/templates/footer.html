@@ -1,0 +1,176 @@
+<section>
+
+    <div class="smart-container">
+        <div class="footer">
+            <div class="container">
+
+                <div class="col-sm-12">
+                    <div class="newsletter">
+                        <div class="col-sm-4">
+                            <div class="logo-footer">
+                                <img src="home/scss/images/footer-logo.png" alt="" >
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="link_footer">
+                                    <ul>
+                                    <li><a href="/whoweare">Who we are</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="howslugrwork">How Slugr Works</a></li>
+                                    <li><a href="/faq">FAQs </a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="sociomedia-footer">
+
+                                <ul>
+                                    <li>Follow us</li>
+                                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../home/scss/images/fb-icon.png"></a></li>
+                                    <li><a href="https://in.linkedin.com" target="_blank"><img src="../home/scss/images/linkedin-icon.png"></a></li>
+                                    <li><a href="https://twitter.com" target="_blank"><img src="../home/scss/images/twitter-icon.png"></a></li>
+                                    <li><a href="https://www.youtube.com" target="_blank"><img src="../home/scss/images/youtube-icon.png"></a></li>
+                                    <li><a href="https://www.instagram.com" target="_blank"><img src="../home/scss/images/instagram.png"></a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="cyp_footer">
+        <div class="col-sm-12">
+            <p><a href="#">Terms  &#38; Privacy</a> | (c) 2017. Trading, Inc., All rights reserved.</p>
+        </div>
+    </div>
+</section>
+<!--  Footer Ends -->
+</main>
+<!--slick --> 
+
+<!-- Modal Login -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-login">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="popup-logo">
+                    <img src="home/scss/images/footer-logo.png" alt="" >
+                </div>
+                <h1>Sign In</h1>
+                <div ng-show="message" class="alert alert-danger">{{message}}</div>
+                <form class="login" ng-submit="login()">
+                    <div class="form-group">        
+                        <input type="email"  required=""  name="email" ng-model="user.email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">         
+                        <input type="password" required="" name="password" ng-model="user.password" class="form-control" placeholder="Enter Password">
+                    </div>       
+                    <input type="submit" name="submit" class="btn defult_btn contin-log" value="Continue">
+                </form> 
+                <div class="or">OR</div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <button class="loginBtn loginBtn--facebook">
+                            Login with Facebook
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <button class="loginBtn loginBtn--google">
+                            Login with Google
+                        </button>
+                    </div>
+                </div>
+
+                <p class="ntlog"><span>Don't have an Account ?  <a id='signmchk' style="cursor: pointer">Sign Up</a></span></p>
+                <p><span><a id='forgetchk' style="cursor: pointer">Forgot Password?</a></span></p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal Login -->
+<div id="frget" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-login">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="popup-logo">
+                    <img src="home/scss/images/footer-logo.png" alt="" >
+                </div>
+                <h1>Forgot Password</h1>
+                <div ng-show="message" class="alert alert-danger">{{message}}</div>
+                <form class="login" ng-submit="forgetpass()">
+                    <div class="form-group">        
+                        <input type="email"  required=""  name="email" ng-model="user.email" class="form-control" placeholder="Email">
+                    </div>
+                           
+                    <input type="submit" name="submit" class="btn defult_btn contin-log" value="Continue">
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Login -->
+<div id="myModalsigup" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-login">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="popup-logo">
+                    <img src="home/scss/images/footer-logo.png" alt="" >
+                </div>
+                <h1>Sign Up</h1>
+                <div ng-show="message" class="alert alert-danger">{{message}}</div>
+                <form class="login" ng-submit="signup()">
+
+                    <div class="form-group">        
+                        <input type="email" name="email"  required="" ng-model='user.email' class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">         
+                        <input type="password" name="password"  required="" class="form-control" ng-model='user.password' placeholder="Enter Password" >
+                    </div>   
+
+                    <div class="form-group">         
+                        <input type="password" name="ConfirmPassword" ng-model="user.cpassword"  required="" class="form-control" placeholder="Re-Enter Password" >
+                    </div> 
+                    <div class="form-group ">                           
+                        <input type="text" id="datepicker" name='dob' ng-model="user.dob"  required="" class="form-control" placeholder="mm/dd/yyyy">
+                    </div> 
+                    <input type="submit" value="Create Account" class="btn defult_btn contin-log">
+                </form> 
+
+
+
+                <p><span>Have an Account ?  <a id='logmchk' style="cursor: pointer">Login</a></span></p>
+                <p>Creating an account means you're okay with slugr Terms of Services. Privacy Policy</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>

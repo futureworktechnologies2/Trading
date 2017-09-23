@@ -1,0 +1,114 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Clubs
+            <small>List</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Clubs</a></li>
+            <li class="active">Clubs List</li>
+        </ol>
+    </section>
+    <div class="form-group">
+        <div class="alert alert-success" ng-show="del">
+            <strong ng-bind="del" ></strong> 
+        </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+
+
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Clubs List</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sr. no</th>                                    
+                                    <th>Name</th>
+                                    <th>Created</th>
+                                    <th>Edit</th>
+                                    <th>View</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr ng-repeat='club in clubs track by $index'>
+                                    <td ng-class="'{{club._id}}'">{{$index + 1}}</td>
+                                    <td ng-class="'{{club._id}}'">{{club.title}}</td>
+                                    <td ng-class="'{{club._id}}'">{{club.created_at | date}}</td>
+                                    <td ng-class="'{{club._id}}'">
+                                        <a ui-sref="editClub({id:club._id})"><i class="fa fa-edit"></i>Edit</a>
+                                    </td>
+                                    <td ng-class="'{{club._id}}'" ng-click='setActive(club)' style="cursor: pointer">View</td>
+                                    <td ng-click="deleteClub(club._id)" ng-class="'{{club._id}}'" ng-show="{{club.role!='admin'}}" style="cursor: pointer">Delete</td>
+                                </tr>                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Sr. no</th>                                    
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Created</th>
+                                    <th>Edit</th>
+                                    <th>View</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class='col-sm-8 full-height'>
+                        <div ng-show="activeClub.title">
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            <h3 class="box-title">Club Details</h3>
+
+
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body table-responsive no-padding">
+                                            <table class="table table-hover">
+                                                <tr>
+                                                    <th>Fields</th>
+                                                    <th>Data</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Title</td>
+                                                    <td>{{activeClub.title}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Description</td>
+                                                    <td>{{activeClub.description}}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                    <!-- /.box -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

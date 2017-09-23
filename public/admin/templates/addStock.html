@@ -1,0 +1,57 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Stock
+            <small>Add Stock</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/stockList"><i class="fa fa-dashboard"></i> Stock</a></li>
+            <li class="active">Add Stock</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-11">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Add Stock</h3>
+                    </div>
+                        <div class="form-group">
+                        <div class="alert alert-success" ng-show="message">
+                            <strong ng-bind="message" ></strong> 
+                        </div>
+                    </div>
+                    <form method="post"  ng-submit="addStock(stock)">
+                        <div class="box-body">
+                            <div class='col-lg-8'>
+                                <div class='form-group'>
+                                    <input type='text' placeholder='Title' ng-model='stock.title' required="" name='title' class='form-control'>
+                                </div>
+                            </div>
+                            <div class='col-lg-8'>
+                                <div class='form-group'>
+                                    <select name="category" class="form-control" ng-model='stock.category' required="">
+
+                                        <option value="">Select Category</option>
+                                        <option value="{{value._id}}" ng-repeat="(key, value) in categorylist">{{value.title}}</option>
+                                    </select>
+                                </div>
+                            </div>
+<!--                             <div class="col-lg-8 full-height">
+                                <div class='form-group'>
+                                    <input type="file" class="form-control" name="image" file-model="stock.image" required="">
+                                    Upload <input type="file" ng-file-select="onFileSelect($files)">
+                                </div>
+                            </div> -->
+                            <div class="col-lg-8">
+                                <input type="submit" value="Publish Stock" name="submit" class="btn btn-success pull-right">                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

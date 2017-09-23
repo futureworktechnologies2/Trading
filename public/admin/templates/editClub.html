@@ -1,0 +1,41 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Club
+            <small>Edit Club</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/clubList"><i class="fa fa-dashboard"></i> Club</a></li>
+            <li class="active">Edit Club</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-11">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Edit Club</h3>
+                    </div>
+                    <div class="form-group">
+                        <div class="alert alert-success" ng-show="update">
+                            <strong ng-bind="update" ></strong> 
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='form-group'>
+                            <input type='text' placeholder='Title' ng-model='club.title' name='title' class='form-control'>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type='hidden' placeholder='club' ng-model='club.id' name='id' class='form-control'>
+                    </div>
+                    <div class="form-group">
+                        <div class='btn btn-success pull-right' ng-click='editClub()'>Publish Club</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
